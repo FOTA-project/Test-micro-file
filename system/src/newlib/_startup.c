@@ -266,7 +266,7 @@ _start (void)
 
 #if !defined(OS_INCLUDE_STARTUP_INIT_MULTIPLE_RAM_SECTIONS)
   // Copy the DATA segment from Flash to RAM (inlined).
-  __initialize_data(&_sidata, &_sdata, &_edata);
+  __initialize_data((unsigned char*)&_sidata +0x2000, &_sdata, &_edata);
 #else
 
   // Copy the data sections from flash to SRAM.
