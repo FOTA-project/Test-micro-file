@@ -62,7 +62,8 @@ __initialize_hardware_early(void)
 #if defined(__ARM_ARCH_7M__) || defined(__ARM_ARCH_7EM__)
   // Set VTOR to the actual address, provided by the linker script.
   // Override the manual, possibly wrong, SystemInit() setting.
-  SCB->VTOR = (uint32_t)(&__vectors_start);
+  // TODO: removed startup() manipulation of VTOR
+  //SCB->VTOR = (uint32_t)(&__vectors_start);
 #endif
 
   // The current version of SystemInit() leaves the value of the clock

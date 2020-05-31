@@ -4,21 +4,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/DIO_program.c \
-../src/Delay_program.c \
-../src/RCC_program.c \
 ../src/main.c 
 
 OBJS += \
-./src/DIO_program.o \
-./src/Delay_program.o \
-./src/RCC_program.o \
 ./src/main.o 
 
 C_DEPS += \
-./src/DIO_program.d \
-./src/Delay_program.d \
-./src/RCC_program.d \
 ./src/main.d 
 
 
